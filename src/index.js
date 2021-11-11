@@ -54,7 +54,6 @@ const show_next_card = function () {
         solution.style.display = "none";
         document.body.appendChild(reveal_box);
 
-        flag_restart = true;
     }
 
 };
