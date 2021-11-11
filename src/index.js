@@ -1,5 +1,7 @@
 
 let vocabulary_index = 0;
+
+// TODO make json file
 const vocabulary_list = [
 
     "assembly;Montage",
@@ -14,7 +16,15 @@ const vocabulary_list = [
     "(to) plug in;einstecken",
     "resilient;widerstandsfähig",
     "secure connection;sichere Verbindung",
-    "reliable;zuverlässig"
+    "reliable;zuverlässig",
+    "query;Anfrage/Abfrage",
+    "(to) process;verarbeiten",
+    "volatile;flüchtig",
+    "clipboard;Zwischenablage",
+    "grid;Gitter",
+    "power supply;Netzteil",
+    "cooling fan;Lüfter",
+    "air-conditioned:klimatisiert"
 
 ];
 
