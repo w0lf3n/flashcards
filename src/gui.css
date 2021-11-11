@@ -45,3 +45,11 @@ body {
     padding: 10px;
     margin: 0;
 }
+
+fieldset legend {
+    font-weight: bold;
+}
+
+fieldset div {
+    margin: 10px 5px;
+}
