@@ -95,10 +95,12 @@ const create_elements = function () {
 
     question = document.createElement("p");
     question.className = "Question";
+    question.style.display = "block";
     word_container.appendChild(question);
 
     solution = document.createElement("p");
     solution.className = "Solution";
+    solution.style.display = "none";
     word_container.appendChild(solution);
 
     reveal_box = document.createElement("div");
@@ -111,6 +113,7 @@ const start_tester = function (reveal_immediately) {
     prompt_box.style.display = "none";
     flag_restart = true;
     state_quest = true;
+    vocabulary_index = 0;
     shuffle(vocabulary_list);
     create_elements();
     show_next_card();
