@@ -61,6 +61,11 @@ const show_next_card = function () {
 
 const hit_word_box = function () {
 
+    if (flag_restart) {
+        init_tester();
+        return true;
+    }
+
     if (state_quest) {
 
         if (flag_reveal_immediately) {
@@ -83,6 +88,8 @@ const hit_word_box = function () {
         show_next_card();
 
     }
+
+    return true;
 };
 
 const create_elements = function () {
