@@ -24,7 +24,7 @@ const vocabulary_list = [
     "grid;Gitter",
     "power supply;Netzteil",
     "cooling fan;Lüfter",
-    "air-conditioned:klimatisiert"
+    "air-conditioned;klimatisiert"
 
 ];
 
