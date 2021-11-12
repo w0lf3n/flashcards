@@ -1,7 +1,6 @@
 
 let vocabulary_index = 0;
 
-// TODO make json file
 const vocabulary_list = [
 
     "assembly;Montage",
