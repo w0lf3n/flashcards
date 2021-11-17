@@ -1,32 +1,6 @@
 
 let vocabulary_index = 0;
 
-const vocabulary_list = [
-
-    "assembly;Montage",
-    "central node;zentraler Knotenpunkt",
-    "copper wire;Kupferkabel",
-    "data delivery;Datenauslieferung",
-    "(to) go down;ausfallen",
-    "insulation;Isolierung",
-    "layer;Netzzugang (Schicht)",
-    "optical fibre;Glasfaserleiter",
-    "packet switching;Datenpaketvermittlung",
-    "(to) plug in;einstecken",
-    "resilient;widerstandsfähig",
-    "secure connection;sichere Verbindung",
-    "reliable;zuverlässig",
-    "query;Anfrage/Abfrage",
-    "(to) process;verarbeiten",
-    "volatile;flüchtig",
-    "clipboard;Zwischenablage",
-    "grid;Gitter",
-    "power supply;Netzteil",
-    "cooling fan;Lüfter",
-    "air-conditioned;klimatisiert"
-
-];
-
 let flag_reveal_immediately = false;
 let flag_direction_eng_ger = true;
 let flag_restart = true;

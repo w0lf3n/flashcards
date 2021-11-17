@@ -1,0 +1,24 @@
+
+@import url(../lib/dom/gui.css);
+
+.Overview {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Overview .Table h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.Overview .Table table {
+    border-collapse: collapse;
+}
+
+.Overview .Table td:first-child {
+    text-align: right;
+}
+
+.Overview .Table td:nth-child(2n) {
+    padding-right: 5px;
+}

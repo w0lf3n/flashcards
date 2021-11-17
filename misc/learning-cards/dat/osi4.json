@@ -1,0 +1,31 @@
+[
+
+    "20;FTP;File Transfer Protocol;Datenübertragung",
+    "21;FTP;File Transfer Protocol;Verbindungsaufbau und Steuerung",
+    "22;SSH;Secure Shell;u.a. für verschlüsselte Fernwartung",
+    "23;;Telnet;unverschlüsseltes Textprotokoll z.B. für Fernwartung",
+    "25;SMTP;Simple Mail Transfer Protocol;E-Mail-Übermittlung zwischen E-Mail-Servern",
+    "53;DNS;Domain Name System;Namensauflösung von Domains, meist über UDP",
+    "80;HTTP;Hypertext Transfer Protocol;meist Übertragung von Webseiten, ist unverschlüsselt",
+    "110;POP3;Post Office Protocol Version 3;Übertragunsprotokoll, Client ruft E-Mails von E-Mail-Server ab",
+    "135;Microsoft EPMAP;End Point Mapper;",
+    "137-139;NetBIOS;Network Basic Input Output System;NetBIOS Services",
+    "143;IMAP4;Internet Message Access Protocol;Netzwerkprotokoll für E-Mails, Clients ",
+    "443;HTTPS;Hypertext Transfer Protocol over SSL/TLS;verschlüsseltes Übertragungsprotokoll für Webseiten",
+    "445;SMB;Server Message Block;",
+
+    "Schicht 1;Bitübertragungsschicht;Physical Layer;Bits, Symbole",
+    "Schicht 2;Sicherungsschicht;Data Link Layer;Frames",
+    "Schicht 3;Vermittlungsschicht;Network Layer;Pakete",
+    "Schicht 4;Transportschicht;Transport Layer;Segmente(TCP), Datagramme(UDP)",
+    "Schicht 5;Sitzungsschicht;Session Layer;Daten",
+    "Schicht 6;Darstellungsschicht;Presentation Layer;Daten",
+    "Schicht 7;Anwendungsschicht;Application Layer;Daten",
+
+    ";;;;",
+    ";;;;",
+    ";;;;",
+    ";;;;",
+    ";;;;",
+    ";;;;"
+]
