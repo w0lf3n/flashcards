@@ -1,5 +1,6 @@
 
 let vocabulary_index = 0;
+let vocabulary_list = null;
 
 let flag_reveal_immediately = false;
 let flag_direction_eng_ger = true;
@@ -176,4 +177,7 @@ const create_prompt = function () {
 
 };
 
-init_tester();
+fetch("dat/en_test1.json").then(data => {
+    vocabulary_list = data;
+    init_tester();
+});
