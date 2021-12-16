@@ -177,7 +177,7 @@ const create_prompt = function () {
 
 };
 
-fetch("../dat/en_test1.json").then(data => {
+fetch("dat/en_test1.json").then(response => response.json()).then(data => {
     vocabulary_list = data;
     init_tester();
 });
