@@ -30,9 +30,9 @@ const show_next_card = function () {
 
         if (flag_direction_eng_ger) {
             question.textContent = vocable[0];
-            solution.textContent = vocable[1].replace(/\./g, "<br />");
+            solution.textContent = vocable[1].replace(/\./g, "\n");
         } else {
-            question.textContent = vocable[1].replace(/\./g, "<br />");
+            question.textContent = vocable[1].replace(/\./g, "\n");
             solution.textContent = vocable[0];
         }
 
