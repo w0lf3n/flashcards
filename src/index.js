@@ -27,12 +27,19 @@ const show_next_card = function () {
     if (vocabulary_index < vocabulary_list.length) {
 
         const vocable = vocabulary_list[vocabulary_index].split(";");
+        const answers = vocable[1].split(".").map(text => {
+            const text_box = document.createElement("p");
+            text_box.textContent = text;
+            return text_box;
+        });
 
         if (flag_direction_eng_ger) {
             question.textContent = vocable[0];
-            solution.textContent = vocable[1].replace(/\./g, "\n");
+            solution.innerHTML = "";
+            solution.append(...answers);
         } else {
-            question.textContent = vocable[1].replace(/\./g, "\n");
+            question.innerHTML = "";
+            question.append(...answers);
             solution.textContent = vocable[0];
         }
 

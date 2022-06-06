@@ -1,6 +1,6 @@
 [
     "async function;asynchrone Funktion. gibt ein Promise Objekt zurück",
-    "await;Operator innerhalb von async function. wartet auf Promise",
+    "await;Operator innerhalb async function. wartet auf Promise",
     "CORS;Cross-Origin Resource Sharing",
     "Promise;Art Wrapper für asynchrone Operationen/Ereignisse. gibt Zugriff auf das Egebnis Erfolg oder Fehlschlag",
 
