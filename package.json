@@ -1,0 +1,29 @@
+{
+  "name": "flashcards",
+  "version": "1.0.0",
+  "description": "inspired by:\r * https://www.studysmarter.de/karteikarten/\r * https://www.studysmarter.de/lernsets/\r * https://www.studysmarter.de/lernplan/",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w0lf3n/flashcards.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w0lf3n/flashcards/issues"
+  },
+  "homepage": "https://github.com/w0lf3n/flashcards#readme",
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-security": "^1.5.0"
+  }
+}
