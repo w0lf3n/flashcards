@@ -1,51 +1,78 @@
 import shuffle from "../lib/JST/native/array.js";
+import Random from "../lib/JST/random/random.js";
 import { get_flag } from "./flags.js";
 
-import { init_ui, show_result, show_task } from "./ui.js";
+import { init as init_gui, show_result, show_next_task } from "./ui.js";
 
 
+/** @type {number} */
 let tasks_index = 0;
+/** @type {Array<Array<string>>} */
 let answers = null;
+/** @type {Array<string>} */
 let questions = null;
-let result = [];
+/** @type {Array<string>} */
+let result = null;
 
-let question_to_answer = null;
-let reveal_answers_immediately = null;
+/** @type {boolean} */
+let question_to_answer = true;
+/** @type {boolean} */
+let reveal_answers_immediately = false;
 
 const show_next_card = () => {
 
-    if (tasks_index < questions.length) {
+    if (questions instanceof Array && answers instanceof Array && tasks_index < questions.length) {
+
+        /** @type {Array<string>} */
+        let task_data = null;
 
         if (question_to_answer) {
-            show_task(questions[tasks_index.valueOf()]);
+            task_data = [questions[tasks_index.valueOf()]];
         } else {
-            show_task(...answers[tasks_index.valueOf()]);
+            task_data = answers[tasks_index.valueOf()];
         }
 
-        tasks_index = tasks_index + 1;
+        show_next_task(task_data).then((answer) => {
+            tasks_index = tasks_index + 1;
+            // store result
+            // show_next_card();
+        });
 
     } else {
 
-        show_result();
+        show_result(result);
 
     }
 
 };
 
+/** @param {{key: string, value: Array<string>}} data */
+const load_cards = (data) => {
+    questions = Object.keys(data);
+    answers = Object.values(data);
+};
+
 const begin_session = () => {
-    tasks_index = 0;
-    shuffle(questions);
-    question_to_answer = get_flag("question_to_answer");
-    reveal_answers_immediately = get_flag("reveal_answers_immediately");
-    show_next_card();
+
+    if (questions instanceof Array && questions.length > 0 && answers instanceof Array && answers.length > 0) {
+
+        tasks_index = 0;
+
+        question_to_answer = get_flag("question_to_answer");
+        reveal_answers_immediately = get_flag("reveal_answers_immediately");
+
+        const seed = Date.now();
+        Random.init(seed);
+        shuffle(questions);
+        Random.init(seed);
+        shuffle(answers);
+
+        result = [];
+        show_next_card();
+
+    } else {
+        // error: select flashcards
+    }
 };
 
-const init = (data) => {
-    answers = Object.keys(data);
-    questions = Object.values(data);
-    init_ui(
-        begin_session
-    );
-};
-
-fetch("dat/progr1.json").then((response) => response.json()).then((data) => init(data));
+init_gui(begin_session, load_cards);
