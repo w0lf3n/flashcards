@@ -1,4 +1,4 @@
-# flashcards
+# Flashcards
 
 inspired by:
 * https://www.studysmarter.de/karteikarten/
